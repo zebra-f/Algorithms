@@ -1,1 +1,2 @@
-Some stuff I've learned so far in Python.
+# Python Algorithms
+Some stuff I've learned so far.
