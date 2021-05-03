@@ -1,22 +1,23 @@
-def binary_search(sequence, item):
+def binary_search(sequence, target):
     """
-    sequence- sorted array
+    binary_search- a binary search algorithm that finds the position (index) of a target*
+    within a given sequence* (sorted array)
     """
 
-    start_index = 0
-    end_index = len(sequence) - 1
+    starting_index = 0
+    ending_index = len(sequence) - 1
 
-    while start_index <= end_index:
+    while starting_index <= ending_index:
 
-        midpoint_index = start_index + ((end_index - start_index) // 2)
+        middle_index = starting_index + ((ending_index - starting_index) // 2)
 
-        if sequence[midpoint_index] == item:
-            return midpoint_index
+        if sequence[middle_index] == target:
+            return middle_index
 
-        elif item < sequence[midpoint_index]:
-            end_index = midpoint_index - 1
+        elif target < sequence[middle_index]:
+            ending_index = middle_index - 1
 
         else:
-            start_index = midpoint_index + 1
+            starting_index = middle_index + 1
 
-    return None  # return None if an item is not present in the sequence
+    return None  # return None if a target is not present in the sequence
